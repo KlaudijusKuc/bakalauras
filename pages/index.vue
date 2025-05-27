@@ -69,11 +69,6 @@
       <!-- main content su animacijom -->
       <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-4xl mx-auto text-center transition-all duration-1000 hero-content">
-          <!-- logo -->
-          <div class="mx-auto mb-8 w-20 h-20 relative">
-            <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg hero-logo"></div>
-            <span class="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl">e99</span>
-          </div>
           
           <h1 class="text-5xl md:text-6xl font-display font-bold mb-6 text-white">
             <span class="block hero-title-1">Paverčiame Jūsų Idėjas į</span>
@@ -86,7 +81,7 @@
           
           <div class="flex flex-wrap justify-center gap-4 hero-buttons">
             <button class="px-8 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-600 text-white font-medium hover:from-purple-400 hover:to-blue-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:ring-offset-2 focus:ring-offset-[#1A1D2D] transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/20 animate-button">
-              Pradėti
+              Susisiekite
             </button>
             <button class="px-8 py-3 rounded-lg border border-purple-500/30 text-purple-300 hover:bg-purple-500/10 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:ring-offset-2 focus:ring-offset-[#1A1D2D] transition-all duration-300 backdrop-blur-sm animate-button-delay">
               Mūsų Paslaugos
@@ -358,7 +353,7 @@ onMounted(() => {
     if (observer) observer.observe(el);
   });
 
-  // Scroll indicator handler
+  // scroll indicator handler
   const scrollIndicator = document.querySelector('.scroll-indicator');
   if (scrollIndicator) {
     scrollIndicator.addEventListener('click', () => {
@@ -371,7 +366,7 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-  // Clean up observer
+  // clean up observer
   if (observer) {
     observer.disconnect();
   }
@@ -448,7 +443,7 @@ const features = [
   transform: translateY(0);
 }
 
-/* Stagger animation for glass cards */
+/* stagger animacijos cardams */
 .glass-card:nth-child(2) {
   transition-delay: 0.1s;
 }
@@ -465,7 +460,7 @@ const features = [
   transition-delay: 0.5s;
 }
 
-/* Animated particles */
+/* animuoti particles */
 @keyframes float-particle {
   0%, 100% { 
     transform: translateY(0) translateX(0); 
@@ -487,7 +482,7 @@ const features = [
   animation-iteration-count: infinite;
 }
 
-/* Float animations for geometric shapes */
+/* float animacijos formu */
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(45deg); }
   50% { transform: translateY(-20px) rotate(45deg); }
@@ -514,7 +509,7 @@ const features = [
   animation: float-slow 10s ease-in-out 2s infinite;
 }
 
-/* Hero title animation - display immediately */
+/* hero title animacija */
 .hero-content {
   opacity: 1;
   transform: translateY(0);
@@ -525,21 +520,21 @@ const features = [
   transform: translateY(0);
 }
 
-/* Logo animation */
+/* logo animacija */
 .hero-logo {
   animation: pulse-shadow 3s ease-in-out infinite;
 }
 
 @keyframes pulse-shadow {
-  0%, 100% { 
-    box-shadow: 0 0 15px 2px rgba(139, 92, 246, 0.5);
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.5));
   }
-  50% { 
-    box-shadow: 0 0 30px 5px rgba(59, 130, 246, 0.5);
+  50% {
+    filter: drop-shadow(0 0 30px rgba(59, 130, 246, 0.5));
   }
 }
 
-/* Button animation */
+/* mygtuko animacija */
 @keyframes button-pulse {
   0% { 
     box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7);
@@ -560,7 +555,7 @@ const features = [
   animation: button-pulse 2s 1s infinite;
 }
 
-/* 3D Cube animation */
+/* 3D kubo animacija */
 .cube-wrapper {
   perspective: 800px;
   width: 150px;

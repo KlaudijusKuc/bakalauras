@@ -1,21 +1,21 @@
 <template>
   <section class="py-20 relative overflow-hidden">
-    <!-- Background Effects -->
+    <!-- background animacijos -->
     <div class="absolute inset-0 bg-gradient-to-b from-black via-purple-900/5 to-black"></div>
     <div class="absolute inset-0 bg-[url('/images/grid.svg')] opacity-5"></div>
     
     <div class="container mx-auto px-4 relative z-10">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-display font-bold mb-4 text-white">Ką Sako Mūsų Klientai</h2>
-        <p class="text-xl text-gray-200 max-w-2xl mx-auto">
+      <div class="text-center mb-8 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-3 md:mb-4 text-white">Ką Sako Mūsų Klientai</h2>
+        <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto px-4">
           Sužinokite, ką mūsų klientai sako apie mūsų paslaugas ir bendradarbiavimą
         </p>
       </div>
 
       <div class="relative max-w-4xl mx-auto">
-        <!-- Slider Container -->
-        <div class="relative overflow-hidden px-8">
-          <!-- Slides -->
+        <!-- slideris -->
+        <div class="relative overflow-hidden px-4 md:px-8">
+          <!-- slides -->
           <div 
             class="flex transition-transform duration-500 ease-in-out"
             :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
@@ -23,24 +23,24 @@
             <div 
               v-for="testimonial in testimonials" 
               :key="testimonial.id"
-              class="w-full flex-shrink-0 px-4"
+              class="w-full flex-shrink-0 px-2 md:px-4"
             >
-              <div class="glass-card rounded-xl p-8 h-[350px] flex flex-col">
+              <div class="glass-card rounded-xl p-4 md:p-8 h-[400px] md:h-[350px] flex flex-col">
                 <div class="flex flex-col items-center text-center flex-grow">
-                  <div class="w-20 h-20 rounded-full bg-gradient-to-br from-purple-500/30 to-blue-500/20 flex items-center justify-center mb-4">
-                    <img :src="testimonial.avatar" :alt="testimonial.name" class="w-16 h-16 rounded-full object-cover" />
+                  <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-purple-500/30 to-blue-500/20 flex items-center justify-center mb-3 md:mb-4">
+                    <img :src="testimonial.avatar" :alt="testimonial.name" class="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover" />
                   </div>
-                  <div class="flex mb-3">
-                    <StarIcon v-for="i in 5" :key="i" class="w-5 h-5 text-yellow-400" />
+                  <div class="flex mb-2 md:mb-3">
+                    <StarIcon v-for="i in 5" :key="i" class="w-4 h-4 md:w-5 md:h-5 text-yellow-400" />
                   </div>
-                  <blockquote class="text-xl text-gray-200 mb-4 italic max-w-2xl flex-grow">
+                  <blockquote class="text-base md:text-xl text-gray-200 mb-3 md:mb-4 italic max-w-2xl flex-grow">
                     "{{ testimonial.quote }}"
                   </blockquote>
                   <div class="flex items-center justify-center mt-auto">
-                    <ChatBubbleLeftIcon class="w-6 h-6 text-purple-300 mr-2" />
+                    <ChatBubbleLeftIcon class="w-5 h-5 md:w-6 md:h-6 text-purple-300 mr-2" />
                     <div>
-                      <p class="text-white font-medium">{{ testimonial.name }}</p>
-                      <p class="text-purple-300">{{ testimonial.position }}, {{ testimonial.company }}</p>
+                      <p class="text-white font-medium text-sm md:text-base">{{ testimonial.name }}</p>
+                      <p class="text-purple-300 text-xs md:text-sm">{{ testimonial.position }}, {{ testimonial.company }}</p>
                     </div>
                   </div>
                 </div>
@@ -48,33 +48,33 @@
             </div>
           </div>
 
-          <!-- Navigation Buttons -->
+          <!-- navigacijos mygtukai -->
           <button 
             @click="prevSlide"
-            class="absolute left-0 top-1/2 -translate-y-1/2 bg-purple-600/50 hover:bg-purple-600/70 text-white p-2 rounded-full transition-colors duration-200 z-10"
+            class="absolute left-0 top-1/2 -translate-y-1/2 bg-purple-600/50 hover:bg-purple-600/70 text-white p-3 md:p-2 rounded-full transition-colors duration-200 z-10"
             :disabled="isTransitioning"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           <button 
             @click="nextSlide"
-            class="absolute right-0 top-1/2 -translate-y-1/2 bg-purple-600/50 hover:bg-purple-600/70 text-white p-2 rounded-full transition-colors duration-200 z-10"
+            class="absolute right-0 top-1/2 -translate-y-1/2 bg-purple-600/50 hover:bg-purple-600/70 text-white p-3 md:p-2 rounded-full transition-colors duration-200 z-10"
             :disabled="isTransitioning"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </button>
 
-          <!-- Dot Indicators -->
-          <div class="flex justify-center mt-6 space-x-2">
+          <!-- taskai -->
+          <div class="flex justify-center mt-4 md:mt-6 space-x-2">
             <button 
               v-for="(_, index) in testimonials" 
               :key="index"
               @click="goToSlide(index)"
-              class="w-3 h-3 rounded-full transition-colors duration-200"
+              class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full transition-colors duration-200"
               :class="[
                 currentSlide === index 
                   ? 'bg-purple-500' 

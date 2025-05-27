@@ -27,7 +27,7 @@
           <div>
             <h2 class="text-4xl font-display font-bold mb-6 text-white">Mūsų Istorija</h2>
             <p class="text-xl text-gray-300 mb-6">
-              e-shop99 buvo įkurta 2015 metais su tikslu padėti įmonėms sėkmingai plėtoti savo verslą skaitmeninėje erdvėje.
+              e-shop99 buvo įkurta 2020 metais su tikslu padėti įmonėms sėkmingai plėtoti savo verslą skaitmeninėje erdvėje.
             </p>
             <p class="text-xl text-gray-300 mb-6">
               Per šiuos metus mes išaugome nuo mažos startuolio komandos iki patikimos IT sprendimų įmonės, dirbančios su klientais visoje Lietuvoje ir užsienyje.

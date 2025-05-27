@@ -1,75 +1,75 @@
 <template>
-  <div>
-    <h1 class="text-3xl font-bold text-white mb-8">Valdymo panelė</h1>
+  <div class="px-4 md:px-0">
+    <h1 class="ml-12 lg:ml-0 text-2xl md:text-3xl font-bold text-white mb-6 md:mb-8">Valdymo panelė</h1>
     
     <!-- info korteles -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
       <!-- kontaktiniu zinuciu kortele -->
-      <div class="glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
+      <div class="glass-card rounded-xl p-4 md:p-6 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
         <div class="flex items-start">
-          <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mr-4">
-            <EnvelopeIcon class="w-6 h-6 text-purple-500" />
+          <div class="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mr-3 md:mr-4">
+            <EnvelopeIcon class="w-5 h-5 md:w-6 md:h-6 text-purple-500" />
           </div>
           <div>
-            <h2 class="text-xl font-bold text-white mb-1">Kontaktinės žinutės</h2>
-            <p class="text-gray-400 mb-1">Iš viso: <span class="text-white font-bold">{{ stats.messages }}</span></p>
-            <p class="text-gray-400 mb-3" v-if="stats.latestMessage">
+            <h2 class="text-lg md:text-xl font-bold text-white mb-1">Kontaktinės žinutės</h2>
+            <p class="text-sm md:text-base text-gray-400 mb-1">Iš viso: <span class="text-white font-bold">{{ stats.messages }}</span></p>
+            <p class="text-sm md:text-base text-gray-400 mb-2 md:mb-3" v-if="stats.latestMessage">
               Naujausias: <span class="text-purple-400">{{ formatDate(new Date(stats.latestMessage.createdAt)) }}</span>
             </p>
             <NuxtLink 
               to="/admin/messages" 
-              class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-200"
+              class="inline-flex items-center text-sm md:text-base text-purple-400 hover:text-purple-300 transition-colors duration-200"
             >
               Peržiūrėti žinutes
-              <ArrowRightIcon class="w-4 h-4 ml-1" />
+              <ArrowRightIcon class="w-3 h-3 md:w-4 md:h-4 ml-1" />
             </NuxtLink>
           </div>
         </div>
       </div>
       
       <!-- darbo paraisku kortele -->
-      <div class="glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
+      <div class="glass-card rounded-xl p-4 md:p-6 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
         <div class="flex items-start">
-          <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mr-4">
-            <BriefcaseIcon class="w-6 h-6 text-purple-500" />
+          <div class="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mr-3 md:mr-4">
+            <BriefcaseIcon class="w-5 h-5 md:w-6 md:h-6 text-purple-500" />
           </div>
           <div>
-            <h2 class="text-xl font-bold text-white mb-1">Darbo paraiškos</h2>
-            <p class="text-gray-400 mb-1">Iš viso: <span class="text-white font-bold">{{ stats.jobApplications }}</span></p>
-            <p class="text-gray-400 mb-3" v-if="stats.latestJobApplication">
+            <h2 class="text-lg md:text-xl font-bold text-white mb-1">Darbo paraiškos</h2>
+            <p class="text-sm md:text-base text-gray-400 mb-1">Iš viso: <span class="text-white font-bold">{{ stats.jobApplications }}</span></p>
+            <p class="text-sm md:text-base text-gray-400 mb-2 md:mb-3" v-if="stats.latestJobApplication">
               Naujausias: <span class="text-purple-400">{{ formatDate(new Date(stats.latestJobApplication.createdAt)) }}</span>
             </p>
             <NuxtLink 
               to="/admin/jobs" 
-              class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-200"
+              class="inline-flex items-center text-sm md:text-base text-purple-400 hover:text-purple-300 transition-colors duration-200"
             >
               Peržiūrėti paraiškas
-              <ArrowRightIcon class="w-4 h-4 ml-1" />
+              <ArrowRightIcon class="w-3 h-3 md:w-4 md:h-4 ml-1" />
             </NuxtLink>
           </div>
         </div>
       </div>
       
       <!-- svetaines statistikos kortele -->
-      <div class="glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
+      <div class="glass-card rounded-xl p-4 md:p-6 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
         <div class="flex items-start">
-          <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mr-4">
-            <ChartBarIcon class="w-6 h-6 text-purple-500" />
+          <div class="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mr-3 md:mr-4">
+            <ChartBarIcon class="w-5 h-5 md:w-6 md:h-6 text-purple-500" />
           </div>
           <div>
-            <h2 class="text-xl font-bold text-white mb-1">Svetainės statistika</h2>
-            <p class="text-gray-400 mb-1">
+            <h2 class="text-lg md:text-xl font-bold text-white mb-1">Svetainės statistika</h2>
+            <p class="text-sm md:text-base text-gray-400 mb-1">
               Serverio laikas: <span class="text-white">{{ new Date().toLocaleTimeString() }}</span>
             </p>
-            <p class="text-gray-400 mb-3">
+            <p class="text-sm md:text-base text-gray-400 mb-2 md:mb-3">
               Sistema aktyvuota: <span class="text-white">{{ formatRelativeTime(stats.serverStartTime) }}</span>
             </p>
             <button 
               @click="refreshStats"
-              class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-200"
+              class="inline-flex items-center text-sm md:text-base text-purple-400 hover:text-purple-300 transition-colors duration-200"
             >
               Atnaujinti statistiką
-              <ArrowPathIcon class="w-4 h-4 ml-1" />
+              <ArrowPathIcon class="w-3 h-3 md:w-4 md:h-4 ml-1" />
             </button>
           </div>
         </div>
@@ -77,25 +77,25 @@
     </div>
     
     <!-- naujausiu veiksmu kortele -->
-    <div class="mb-12">
-      <h2 class="text-2xl font-bold text-white mb-6">Naujausi veiksmai</h2>
-      <div class="glass-card rounded-xl p-6">
-        <div class="space-y-4">
-          <div v-if="loading" class="flex justify-center p-8">
-            <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-purple-500"></div>
+    <div class="mb-8 md:mb-12">
+      <h2 class="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">Naujausi veiksmai</h2>
+      <div class="glass-card rounded-xl p-4 md:p-6">
+        <div class="space-y-3 md:space-y-4">
+          <div v-if="loading" class="flex justify-center p-6 md:p-8">
+            <div class="animate-spin rounded-full h-8 w-8 md:h-10 md:w-10 border-b-2 border-purple-500"></div>
           </div>
           
-          <div v-else-if="recentActivity.length === 0" class="text-center py-8">
-            <p class="text-gray-400">Nėra naujausių veiksmų</p>
+          <div v-else-if="recentActivity.length === 0" class="text-center py-6 md:py-8">
+            <p class="text-sm md:text-base text-gray-400">Nėra naujausių veiksmų</p>
           </div>
           
-          <div v-else v-for="(activity, index) in recentActivity" :key="index" class="flex items-start pb-4 border-b border-white/5 last:border-0">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center mr-4 flex-shrink-0">
-              <component :is="getActivityIcon(activity.type)" class="w-5 h-5 text-white" />
+          <div v-else v-for="(activity, index) in recentActivity" :key="index" class="flex items-start pb-3 md:pb-4 border-b border-white/5 last:border-0">
+            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center mr-3 md:mr-4 flex-shrink-0">
+              <component :is="getActivityIcon(activity.type)" class="w-4 h-4 md:w-5 md:h-5 text-white" />
             </div>
             <div class="flex-1">
-              <p class="text-white">{{ activity.description }}</p>
-              <p class="text-gray-400 text-sm">{{ formatDate(activity.date) }}</p>
+              <p class="text-sm md:text-base text-white">{{ activity.description }}</p>
+              <p class="text-xs md:text-sm text-gray-400">{{ formatDate(activity.date) }}</p>
             </div>
           </div>
         </div>
@@ -103,49 +103,49 @@
     </div>
     
     <!-- sistemos statuso kortele -->
-    <div class="mb-12">
-      <h2 class="text-2xl font-bold text-white mb-6">Sistemos būsena</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="mb-8 md:mb-12">
+      <h2 class="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">Sistemos būsena</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         <!-- duomenu bazes statuso kortele -->
-        <div class="glass-card rounded-xl p-6">
-          <div class="flex items-center mb-3">
-            <div class="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
-            <h3 class="text-white font-semibold">Duomenų bazė</h3>
+        <div class="glass-card rounded-xl p-4 md:p-6">
+          <div class="flex items-center mb-2 md:mb-3">
+            <div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-green-500 mr-2"></div>
+            <h3 class="text-sm md:text-base text-white font-semibold">Duomenų bazė</h3>
           </div>
-          <p class="text-gray-400 text-sm">
+          <p class="text-xs md:text-sm text-gray-400">
             Duomenų bazė veikia be sutrikimų. Paskutinis prisijungimas: {{ formatDateFull(stats.lastDatabaseConnection) }}
           </p>
         </div>
         
         <!-- API statuso kortele -->
-        <div class="glass-card rounded-xl p-6">
-          <div class="flex items-center mb-3">
-            <div class="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
-            <h3 class="text-white font-semibold">API</h3>
+        <div class="glass-card rounded-xl p-4 md:p-6">
+          <div class="flex items-center mb-2 md:mb-3">
+            <div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-green-500 mr-2"></div>
+            <h3 class="text-sm md:text-base text-white font-semibold">API</h3>
           </div>
-          <p class="text-gray-400 text-sm">
+          <p class="text-xs md:text-sm text-gray-400">
             API veikia be sutrikimų. Paskutinis užklausos laikas: {{ stats.lastApiResponseTime }}ms
           </p>
         </div>
         
         <!-- serverio statuso kortele -->
-        <div class="glass-card rounded-xl p-6">
-          <div class="flex items-center mb-3">
-            <div class="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
-            <h3 class="text-white font-semibold">Serveris</h3>
+        <div class="glass-card rounded-xl p-4 md:p-6">
+          <div class="flex items-center mb-2 md:mb-3">
+            <div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-green-500 mr-2"></div>
+            <h3 class="text-sm md:text-base text-white font-semibold">Serveris</h3>
           </div>
-          <p class="text-gray-400 text-sm">
+          <p class="text-xs md:text-sm text-gray-400">
             Serveris veikia normalioje apkrovoje. Sesijos trukmė: {{ formatDuration(stats.serverUptime) }}
           </p>
         </div>
         
         <!-- saugyklos statuso kortele -->
-        <div class="glass-card rounded-xl p-6">
-          <div class="flex items-center mb-3">
-            <div class="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
-            <h3 class="text-white font-semibold">Saugykla</h3>
+        <div class="glass-card rounded-xl p-4 md:p-6">
+          <div class="flex items-center mb-2 md:mb-3">
+            <div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-green-500 mr-2"></div>
+            <h3 class="text-sm md:text-base text-white font-semibold">Saugykla</h3>
           </div>
-          <p class="text-gray-400 text-sm">
+          <p class="text-xs md:text-sm text-gray-400">
             Saugykla veikia be sutrikimų. Panaudota: {{ stats.storageUsed }}% iš skirtos vietos
           </p>
         </div>
@@ -154,22 +154,22 @@
     
     <!-- greiti veiksmai -->
     <div>
-      <h2 class="text-2xl font-bold text-white mb-6">Greiti veiksmai</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <NuxtLink to="/admin/messages" class="glass-card rounded-xl p-4 flex items-center justify-center text-white hover:bg-white/10 transition-colors duration-200">
-          <EnvelopeIcon class="w-5 h-5 mr-2 text-purple-500" />
+      <h2 class="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">Greiti veiksmai</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+        <NuxtLink to="/admin/messages" class="glass-card rounded-xl p-3 md:p-4 flex items-center justify-center text-sm md:text-base text-white hover:bg-white/10 transition-colors duration-200">
+          <EnvelopeIcon class="w-4 h-4 md:w-5 md:h-5 mr-2 text-purple-500" />
           Peržiūrėti žinutes
         </NuxtLink>
-        <NuxtLink to="/admin/jobs" class="glass-card rounded-xl p-4 flex items-center justify-center text-white hover:bg-white/10 transition-colors duration-200">
-          <BriefcaseIcon class="w-5 h-5 mr-2 text-purple-500" />
+        <NuxtLink to="/admin/jobs" class="glass-card rounded-xl p-3 md:p-4 flex items-center justify-center text-sm md:text-base text-white hover:bg-white/10 transition-colors duration-200">
+          <BriefcaseIcon class="w-4 h-4 md:w-5 md:h-5 mr-2 text-purple-500" />
           Peržiūrėti paraiškas
         </NuxtLink>
-        <NuxtLink to="/" target="_blank" class="glass-card rounded-xl p-4 flex items-center justify-center text-white hover:bg-white/10 transition-colors duration-200">
-          <GlobeAltIcon class="w-5 h-5 mr-2 text-purple-500" />
+        <NuxtLink to="/" target="_blank" class="glass-card rounded-xl p-3 md:p-4 flex items-center justify-center text-sm md:text-base text-white hover:bg-white/10 transition-colors duration-200">
+          <GlobeAltIcon class="w-4 h-4 md:w-5 md:h-5 mr-2 text-purple-500" />
           Atidaryti svetainę
         </NuxtLink>
-        <button @click="refreshStats" class="glass-card rounded-xl p-4 flex items-center justify-center text-white hover:bg-white/10 transition-colors duration-200">
-          <ArrowPathIcon class="w-5 h-5 mr-2 text-purple-500" />
+        <button @click="refreshStats" class="glass-card rounded-xl p-3 md:p-4 flex items-center justify-center text-sm md:text-base text-white hover:bg-white/10 transition-colors duration-200">
+          <ArrowPathIcon class="w-4 h-4 md:w-5 md:h-5 mr-2 text-purple-500" />
           Atnaujinti duomenis
         </button>
       </div>
@@ -191,7 +191,8 @@ import {
 } from '@heroicons/vue/24/outline';
 
 definePageMeta({
-  layout: 'admin'
+  layout: 'admin',
+  middleware: ['auth']
 });
 
 const loading = ref(true);
