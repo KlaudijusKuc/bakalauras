@@ -45,10 +45,13 @@
         <div>
           <h3 class="text-white font-bold text-lg mb-6">Paslaugos</h3>
           <ul class="space-y-3">
-            <li v-for="service in services" :key="service">
-              <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300 block">
-                {{ service }}
-              </a>
+            <li v-for="service in services" :key="service.name">
+              <NuxtLink 
+                :to="service.path"
+                class="text-gray-300 hover:text-white transition-colors duration-300 block"
+              >
+                {{ service.name }}
+              </NuxtLink>
             </li>
           </ul>
         </div>
@@ -114,12 +117,12 @@ const navigationItems = [
 ]
 
 const services = [
-  'Web Development',
-  'Mobilios Programėlės',
-  'Skaitmeninis Marketingas',
-  'Kibernetinis Saugumas',
-  'Debesies Sprendimai',
-  'Konsultacijos'
+  { name: 'Web Development', path: '/services#web-development' },
+  { name: 'Mobilios Programėlės', path: '/services#mobile-apps' },
+  { name: 'Skaitmeninis Marketingas', path: '/services#digital-marketing' },
+  { name: 'Kibernetinis Saugumas', path: '/services#cybersecurity' },
+  { name: 'Debesies Sprendimai', path: '/services#cloud-solutions' },
+  { name: 'Konsultacijos', path: '/services#consulting' }
 ]
 
 const socialLinks = [
@@ -146,8 +149,8 @@ const socialLinks = [
 ]
 
 const legalLinks = [
-  { name: 'Privatumo politika', path: '/privacy' },
-  { name: 'Sąlygos ir taisyklės', path: '/terms' },
-  { name: 'Slapukų politika', path: '/cookies' }
+  { name: 'Privatumo politika', path: '#' },
+  { name: 'Sąlygos ir taisyklės', path: '#' },
+  { name: 'Slapukų politika', path: '#' }
 ]
 </script> 

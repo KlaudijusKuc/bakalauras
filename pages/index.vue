@@ -79,12 +79,18 @@
           </p>
           
           <div class="flex flex-wrap justify-center gap-4">
-            <button class="px-8 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-600 text-white font-medium hover:from-purple-400 hover:to-blue-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:ring-offset-2 focus:ring-offset-[#1A1D2D] transition-all duration-300 transform hover:scale-105">
+            <NuxtLink 
+              to="/contacts" 
+              class="px-8 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-600 text-white font-medium hover:from-purple-400 hover:to-blue-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:ring-offset-2 focus:ring-offset-[#1A1D2D] transition-all duration-300 transform hover:scale-105"
+            >
               Susisiekite
-            </button>
-            <button class="px-8 py-3 rounded-lg border border-purple-500/30 text-purple-300 hover:bg-purple-500/10 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:ring-offset-2 focus:ring-offset-[#1A1D2D] transition-all duration-300">
+            </NuxtLink>
+            <NuxtLink 
+              to="/services" 
+              class="px-8 py-3 rounded-lg border border-purple-500/30 text-purple-300 hover:bg-purple-500/10 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:ring-offset-2 focus:ring-offset-[#1A1D2D] transition-all duration-300"
+            >
               Mūsų Paslaugos
-            </button>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -182,9 +188,12 @@
           <p class="text-xl text-gray-300 mb-8">
             Susisiekite su mumis ir sužinokite, kaip galime padėti Jūsų verslui augti
           </p>
-          <button class="px-8 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-600 text-white font-medium hover:from-purple-400 hover:to-blue-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:ring-offset-2 focus:ring-offset-[#1A1D2D] transition-all duration-300 hover:scale-105">
+          <NuxtLink 
+            to="/contacts" 
+            class="inline-block px-8 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-600 text-white font-medium hover:from-purple-400 hover:to-blue-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:ring-offset-2 focus:ring-offset-[#1A1D2D] transition-all duration-300 hover:scale-105"
+          >
             Susisiekti
-          </button>
+          </NuxtLink>
         </div>
       </div>
     </section>

@@ -25,7 +25,7 @@
       <div class="container mx-auto px-4 relative z-1">
         <div class="space-y-24">
           <!-- web development -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div id="web-development" class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div class="order-2 lg:order-1">
               <h2 class="text-4xl font-display font-bold mb-6 text-white">Web Kūrimas</h2>
               <p class="text-xl text-gray-300 mb-6">
@@ -60,7 +60,7 @@
           </div>
 
           <!-- mobile apps -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div id="mobile-apps" class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <div class="flex justify-center">
                 <div class="w-32 h-32 rounded-full bg-gradient-to-r from-purple-500/30 to-blue-500/30 flex items-center justify-center">
@@ -95,7 +95,7 @@
           </div>
 
           <!-- skaitmeninis marketingas -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div id="digital-marketing" class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div class="order-2 lg:order-1">
               <h2 class="text-4xl font-display font-bold mb-6 text-white">Skaitmeninis Marketingas</h2>
               <p class="text-xl text-gray-300 mb-6">
@@ -147,7 +147,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- kibernetinis saugumas -->
-          <div class="glass-card rounded-xl p-8 hover:scale-105 transition-transform duration-300">
+          <div id="cybersecurity" class="glass-card rounded-xl p-8 hover:scale-105 transition-transform duration-300">
             <div class="flex flex-col h-full">
               <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-6">
                 <ShieldCheckIcon class="w-6 h-6 text-purple-500" />
@@ -160,7 +160,7 @@
           </div>
 
           <!-- debesies sprendimai -->
-          <div class="glass-card rounded-xl p-8 hover:scale-105 transition-transform duration-300">
+          <div id="cloud-solutions" class="glass-card rounded-xl p-8 hover:scale-105 transition-transform duration-300">
             <div class="flex flex-col h-full">
               <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-6">
                 <CloudIcon class="w-6 h-6 text-purple-500" />
@@ -199,7 +199,7 @@
           </div>
 
           <!-- IT konsultacijos -->
-          <div class="glass-card rounded-xl p-8 hover:scale-105 transition-transform duration-300">
+          <div id="consulting" class="glass-card rounded-xl p-8 hover:scale-105 transition-transform duration-300">
             <div class="flex flex-col h-full">
               <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-6">
                 <UserGroupIcon class="w-6 h-6 text-purple-500" />
