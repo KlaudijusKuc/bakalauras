@@ -27,8 +27,8 @@
             >
               <div class="glass-card rounded-xl p-4 md:p-8 h-[400px] md:h-[350px] flex flex-col">
                 <div class="flex flex-col items-center text-center flex-grow">
-                  <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-purple-500/30 to-blue-500/20 flex items-center justify-center mb-3 md:mb-4">
-                    <img :src="testimonial.avatar" :alt="testimonial.name" class="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover" />
+                  <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center mb-3 md:mb-4 ring-4 ring-purple-500/20">
+                    <span class="text-white text-xl md:text-2xl font-semibold">{{ testimonial.name.charAt(0) }}</span>
                   </div>
                   <div class="flex mb-2 md:mb-3">
                     <StarIcon v-for="i in 5" :key="i" class="w-4 h-4 md:w-5 md:h-5 text-yellow-400" />

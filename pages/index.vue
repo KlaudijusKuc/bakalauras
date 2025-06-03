@@ -66,24 +66,23 @@
         </div>
       </div>
       
-      <!-- main content su animacijom -->
+      <!-- main content -->
       <div class="container mx-auto px-4 relative z-10">
-        <div class="max-w-4xl mx-auto text-center transition-all duration-1000 hero-content">
-          
+        <div class="max-w-4xl mx-auto text-center">
           <h1 class="text-5xl md:text-6xl font-display font-bold mb-6 text-white">
-            <span class="block hero-title-1">Paverčiame Jūsų Idėjas į</span>
-            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 hero-title-2">Skaitmeninę Realybę</span>
+            <span class="block">Paverčiame Jūsų Idėjas į</span>
+            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">Skaitmeninę Realybę</span>
           </h1>
           
-          <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto hero-desc">
+          <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Mes kuriame inovatyvius skaitmeninius sprendimus, kurie padeda Jūsų verslui augti ir klestėti šiuolaikiniame pasaulyje.
           </p>
           
-          <div class="flex flex-wrap justify-center gap-4 hero-buttons">
-            <button class="px-8 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-600 text-white font-medium hover:from-purple-400 hover:to-blue-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:ring-offset-2 focus:ring-offset-[#1A1D2D] transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/20 animate-button">
+          <div class="flex flex-wrap justify-center gap-4">
+            <button class="px-8 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-600 text-white font-medium hover:from-purple-400 hover:to-blue-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:ring-offset-2 focus:ring-offset-[#1A1D2D] transition-all duration-300 transform hover:scale-105">
               Susisiekite
             </button>
-            <button class="px-8 py-3 rounded-lg border border-purple-500/30 text-purple-300 hover:bg-purple-500/10 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:ring-offset-2 focus:ring-offset-[#1A1D2D] transition-all duration-300 backdrop-blur-sm animate-button-delay">
+            <button class="px-8 py-3 rounded-lg border border-purple-500/30 text-purple-300 hover:bg-purple-500/10 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:ring-offset-2 focus:ring-offset-[#1A1D2D] transition-all duration-300">
               Mūsų Paslaugos
             </button>
           </div>
@@ -91,7 +90,7 @@
       </div>
       
       <!-- rodykle zemyn -->
-      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center space-y-2 cursor-pointer">
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center space-y-2 cursor-pointer scroll-indicator">
         <span class="text-gray-400 text-sm">Slinkite žemyn</span>
         <ChevronDownIcon class="w-6 h-6 text-gray-400 animate-bounce" />
       </div>
@@ -111,81 +110,14 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- web development -->
-          <div class="glass-card rounded-xl p-8 hover:scale-105 transition-transform duration-300">
+          <div v-for="service in services" :key="service.title" 
+               class="glass-card rounded-xl p-8 transition-all duration-300 hover:scale-105">
             <div class="flex flex-col h-full">
               <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-6">
-                <CodeBracketIcon class="w-6 h-6 text-purple-500" />
+                <component :is="service.icon" class="w-6 h-6 text-purple-500" />
               </div>
-              <h3 class="text-xl font-bold text-white mb-4">Tinklalapių Kūrimas</h3>
-              <p class="text-gray-300 flex-grow">
-                Individualūs web aplikacijų sprendimai, sukurti naudojant moderniausias technologijas ir geriausias praktikas.
-              </p>
-            </div>
-          </div>
-
-          <!-- mobilios programeles -->
-          <div class="glass-card rounded-xl p-8 hover:scale-105 transition-transform duration-300">
-            <div class="flex flex-col h-full">
-              <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-6">
-                <DevicePhoneMobileIcon class="w-6 h-6 text-purple-500" />
-              </div>
-              <h3 class="text-xl font-bold text-white mb-4">Mobilios Programėlės</h3>
-              <p class="text-gray-300 flex-grow">
-                Natūralios ir kryžminės platformos mobilios programėlės iOS ir Android sistemoms.
-              </p>
-            </div>
-          </div>
-
-          <!-- skaitmeninis marketingas -->
-          <div class="glass-card rounded-xl p-8 hover:scale-105 transition-transform duration-300">
-            <div class="flex flex-col h-full">
-              <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-6">
-                <ChartBarIcon class="w-6 h-6 text-purple-500" />
-              </div>
-              <h3 class="text-xl font-bold text-white mb-4">Skaitmeninis Marketingas</h3>
-              <p class="text-gray-300 flex-grow">
-                Strateginiai marketingo sprendimai jūsų internetinės svetainės verslo augimui.
-              </p>
-            </div>
-          </div>
-
-          <!-- kibernetinis saugumas -->
-          <div class="glass-card rounded-xl p-8 hover:scale-105 transition-transform duration-300">
-            <div class="flex flex-col h-full">
-              <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-6">
-                <ShieldCheckIcon class="w-6 h-6 text-purple-500" />
-              </div>
-              <h3 class="text-xl font-bold text-white mb-4">Kibernetinis Saugumas</h3>
-              <p class="text-gray-300 flex-grow">
-                Visapusiški saugumo sprendimai jūsų skaitmeniniam turtui apsaugoti.
-              </p>
-            </div>
-          </div>
-
-          <!-- debesies sprendimai -->
-          <div class="glass-card rounded-xl p-8 hover:scale-105 transition-transform duration-300">
-            <div class="flex flex-col h-full">
-              <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-6">
-                <CloudIcon class="w-6 h-6 text-purple-500" />
-              </div>
-              <h3 class="text-xl font-bold text-white mb-4">Debesies Sprendimai</h3>
-              <p class="text-gray-300 flex-grow">
-                Masteliuojama debesies infrastruktūra ir debesijos paslaugos.
-              </p>
-            </div>
-          </div>
-
-          <!-- konsultacijos -->
-          <div class="glass-card rounded-xl p-8 hover:scale-105 transition-transform duration-300">
-            <div class="flex flex-col h-full">
-              <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-6">
-                <UserGroupIcon class="w-6 h-6 text-purple-500" />
-              </div>
-              <h3 class="text-xl font-bold text-white mb-4">Konsultacijos</h3>
-              <p class="text-gray-300 flex-grow">
-                Ekspertinės vadovavimas jūsų skaitmeninės transformacijos kelionei.
-              </p>
+              <h3 class="text-xl font-bold text-white mb-4">{{ service.title }}</h3>
+              <p class="text-gray-300 flex-grow">{{ service.description }}</p>
             </div>
           </div>
         </div>
@@ -206,54 +138,13 @@
             </p>
 
             <div class="space-y-8">
-              <div class="flex items-start">
+              <div v-for="feature in features" :key="feature.title" class="flex items-start">
                 <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mr-4">
-                  <UserCircleIcon class="w-6 h-6 text-purple-500" />
+                  <component :is="feature.icon" class="w-6 h-6 text-purple-500" />
                 </div>
                 <div>
-                  <h3 class="text-xl font-bold text-white mb-2">Ekspertų Komanda</h3>
-                  <p class="text-gray-300">
-                    Mūsų komandą sudaro patyrę profesionalai su įvairiapatiršu.
-                  </p>
-                </div>
-              </div>
-
-              <!-- individual solutions -->
-              <div class="flex items-start">
-                <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mr-4">
-                  <AdjustmentsHorizontalIcon class="w-6 h-6 text-purple-500" />
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold text-white mb-2">Individualūs Sprendimai</h3>
-                  <p class="text-gray-300">
-                    Pritaikyti sprendimai, sukurti atitikti jūsų specifikus verslo poreikius.
-                  </p>
-                </div>
-              </div>
-
-              <!-- kokybes uztikrinimas -->
-              <div class="flex items-start">
-                <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mr-4">
-                  <CheckBadgeIcon class="w-6 h-6 text-purple-500" />
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold text-white mb-2">Kokybės Užtikrinimas</h3>
-                  <p class="text-gray-300">
-                    Stiprus testavimo ir kokybės kontrolės procesai patikimiems rezultatams.
-                  </p>
-                </div>
-              </div>
-
-              <!-- 24/7 palaikymas -->
-              <div class="flex items-start">
-                <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mr-4">
-                  <PhoneIcon class="w-6 h-6 text-purple-500" />
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold text-white mb-2">24/7 Palaikymas</h3>
-                  <p class="text-gray-300">
-                    Visą parą techninė pagalba ir priežiūros paslaugos.
-                  </p>
+                  <h3 class="text-xl font-bold text-white mb-2">{{ feature.title }}</h3>
+                  <p class="text-gray-300">{{ feature.description }}</p>
                 </div>
               </div>
             </div>
@@ -263,7 +154,6 @@
           <div class="relative">
             <div class="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-blue-500/30 rounded-full blur-3xl"></div>
             <div class="relative aspect-square">
-              <!-- pakeist i nuotrauka -->
               <div class="absolute inset-0 flex items-center justify-center">
                 <div class="w-64 h-64 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 animate-pulse"></div>
               </div>
@@ -292,7 +182,7 @@
           <p class="text-xl text-gray-300 mb-8">
             Susisiekite su mumis ir sužinokite, kaip galime padėti Jūsų verslui augti
           </p>
-          <button class="px-8 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-600 text-white font-medium hover:from-purple-400 hover:to-blue-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:ring-offset-2 focus:ring-offset-[#1A1D2D] transition-all duration-200 transform hover:scale-105">
+          <button class="px-8 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-600 text-white font-medium hover:from-purple-400 hover:to-blue-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:ring-offset-2 focus:ring-offset-[#1A1D2D] transition-all duration-300 hover:scale-105">
             Susisiekti
           </button>
         </div>
@@ -309,119 +199,82 @@ import {
   ChartBarIcon,
   CloudIcon,
   UserGroupIcon,
-  UserCircleIcon,
-  AdjustmentsHorizontalIcon,
-  CheckBadgeIcon,
-  PhoneIcon,
   ChevronDownIcon
 } from '@heroicons/vue/24/outline'
 import Testimonials from '~/components/Testimonials.vue'
-import BlogPreview from '~/components/BlogPreview.vue'
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted } from 'vue'
 
 definePageMeta({
   layout: 'default'
 })
 
-// Scroll animation logic for glass cards only
-let observer: IntersectionObserver | null = null;
-
-onMounted(() => {
-  // Initialize hero animation on page load immediately
-  const heroContent = document.querySelector('.hero-content');
-  if (heroContent) {
-    heroContent.classList.add('opacity-100', 'translate-y-0');
-  }
-
-  // Set up intersection observer for services cards animations only
-  observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animated');
-        }
-      });
-    },
-    { 
-      threshold: 0.1,
-      rootMargin: '0px 0px -10% 0px' 
-    }
-  );
-
-  // Observe elements that should animate on scroll (only glass cards)
-  document.querySelectorAll('.glass-card').forEach(el => {
-    if (observer) observer.observe(el);
-  });
-
-  // scroll indicator handler
-  const scrollIndicator = document.querySelector('.scroll-indicator');
-  if (scrollIndicator) {
-    scrollIndicator.addEventListener('click', () => {
-      const servicesSection = document.getElementById('services');
-      if (servicesSection) {
-        servicesSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  }
-});
-
-onUnmounted(() => {
-  // clean up observer
-  if (observer) {
-    observer.disconnect();
-  }
-});
-
 const services = [
   {
     title: 'Tinklalapių Kūrimas',
-    description: 'Kuriame modernius, greitai veikiančius ir patrauklius tinklalapius, pritaikytus Jūsų verslo poreikiams.',
+    description: 'Individualūs web aplikacijų sprendimai, sukurti naudojant moderniausias technologijas ir geriausias praktikas.',
     icon: CodeBracketIcon
   },
   {
     title: 'Mobilios Programėlės',
-    description: 'Kuriame iOS ir Android programėles, kurios padeda pasiekti Jūsų klientus bet kur ir bet kada.',
+    description: 'Natūralios ir kryžminės platformos mobilios programėlės iOS ir Android sistemoms.',
     icon: DevicePhoneMobileIcon
   },
   {
     title: 'Kibernetinis Saugumas',
-    description: 'Užtikriname Jūsų skaitmeninių sistemų ir duomenų saugumą su pažangiausiais saugumo sprendimais.',
+    description: 'Visapusiški saugumo sprendimai jūsų skaitmeniniam turtui apsaugoti.',
     icon: ShieldCheckIcon
+  },
+  {
+    title: 'Debesies Sprendimai',
+    description: 'Masteliuojama debesies infrastruktūra ir debesijos paslaugos.',
+    icon: CloudIcon
+  },
+  {
+    title: 'Skaitmeninis Marketingas',
+    description: 'Strateginiai marketingo sprendimai jūsų internetinės svetainės verslo augimui.',
+    icon: ChartBarIcon
+  },
+  {
+    title: 'Konsultacijos',
+    description: 'Ekspertinės vadovavimas jūsų skaitmeninės transformacijos kelionei.',
+    icon: UserGroupIcon
   }
 ]
 
 const features = [
   {
-    title: 'Patirtis',
-    description: 'Daugiau nei 10 metų patirtis kuriant skaitmeninius sprendimus.',
-    icon: ChartBarIcon
-  },
-  {
-    title: 'Debesų Technologijos',
-    description: 'Naudojame moderniausias debesų technologijas Jūsų projektams.',
-    icon: CloudIcon
-  },
-  {
-    title: 'Inovacijos',
-    description: 'Nuolat diegiame naujausias technologijas ir sprendimus.',
-    icon: CodeBracketIcon
-  },
-  {
-    title: 'Greitis',
-    description: 'Greitai ir efektyviai įgyvendiname projektus.',
-    icon: ChartBarIcon
-  },
-  {
-    title: 'Komanda',
-    description: 'Profesionali komanda, pasirengusi padėti 24/7.',
+    title: 'Ekspertų Komanda',
+    description: 'Mūsų komandą sudaro patyrę profesionalai su įvairiapatiršu.',
     icon: UserGroupIcon
   },
   {
-    title: 'Sprendimai',
-    description: 'Individualūs sprendimai kiekvienam klientui.',
+    title: 'Individualūs Sprendimai',
+    description: 'Pritaikyti sprendimai, sukurti atitikti jūsų specifikus verslo poreikius.',
     icon: CodeBracketIcon
+  },
+  {
+    title: 'Kokybės Užtikrinimas',
+    description: 'Stiprus testavimo ir kokybės kontrolės procesai patikimiems rezultatams.',
+    icon: ShieldCheckIcon
+  },
+  {
+    title: '24/7 Palaikymas',
+    description: 'Visą parą techninė pagalba ir priežiūros paslaugos.',
+    icon: CloudIcon
   }
 ]
+
+onMounted(() => {
+  const scrollIndicator = document.querySelector('.scroll-indicator')
+  if (scrollIndicator) {
+    scrollIndicator.addEventListener('click', () => {
+      const servicesSection = document.getElementById('services')
+      if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: 'smooth' })
+      }
+    })
+  }
+})
 </script>
 
 <style scoped>
@@ -433,31 +286,7 @@ const features = [
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
-}
-
-.glass-card.animated {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* stagger animacijos cardams */
-.glass-card:nth-child(2) {
-  transition-delay: 0.1s;
-}
-.glass-card:nth-child(3) {
-  transition-delay: 0.2s;
-}
-.glass-card:nth-child(4) {
-  transition-delay: 0.3s;
-}
-.glass-card:nth-child(5) {
-  transition-delay: 0.4s;
-}
-.glass-card:nth-child(6) {
-  transition-delay: 0.5s;
+  will-change: transform;
 }
 
 /* animuoti particles */
