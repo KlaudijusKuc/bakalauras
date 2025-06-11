@@ -6,7 +6,7 @@
     
     <div class="container mx-auto px-4 relative z-10">
       <div class="text-center mb-8 md:mb-16">
-        <h2 class="text-3xl md:text-4xl font-display font-bold mb-3 md:mb-4 text-white">Ką Sako Mūsų Klientai</h2>
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-3 md:mb-4 text-white">Ką sako mūsų klientai</h2>
         <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto px-4">
           Sužinokite, ką mūsų klientai sako apie mūsų paslaugas ir bendradarbiavimą
         </p>

@@ -1,11 +1,11 @@
 <template>
   <section class="py-16 bg-gradient-to-b from-gray-900 to-gray-950">
     <div class="container mx-auto px-4">
-      <!-- Section Header -->
+      <!-- section headeris -->
       <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
         <div class="space-y-2">
           <h2 class="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">
-            Naujausi Įrašai
+            Naujausi įrašai
           </h2>
           <p class="text-gray-400 max-w-2xl">
             Atraskite naujausius technologijų pasaulio įžvalgas ir tendencijas
@@ -17,13 +17,13 @@
                  border border-cyan-400/20 hover:border-cyan-400/50 transition-all duration-300"
         >
           <span class="bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent font-medium">
-            Visi Įrašai
+            Visi įrašai
             <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
           </span>
         </NuxtLink>
       </div>
 
-      <!-- Blog Grid -->
+      <!-- blog gridas -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <article 
           v-for="post in latestPosts" 
@@ -31,7 +31,7 @@
           class="group relative flex flex-col rounded-xl bg-gray-800/30 backdrop-blur-sm border border-gray-700 
                  hover:border-cyan-400/50 transition-all duration-500 overflow-hidden"
         >
-          <!-- Image Container -->
+          <!-- foto -->
           <div class="relative h-56 overflow-hidden">
             <img 
               :src="post.image" 
@@ -40,7 +40,7 @@
             >
             <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-80"></div>
             
-            <!-- Category Badge -->
+            <!-- kategorija -->
             <span 
               class="absolute top-4 left-4 text-xs font-medium text-cyan-400 bg-cyan-400/10 
                      border border-cyan-400/20 px-3 py-1 rounded-full"
@@ -49,7 +49,7 @@
             </span>
           </div>
 
-          <!-- Content -->
+          <!-- content -->
           <div class="flex flex-col flex-grow p-6 space-y-4">
             <div class="flex-grow space-y-3">
               <h3 class="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">
@@ -67,7 +67,7 @@
             </div>
           </div>
 
-          <!-- Hover Effect Overlay -->
+          <!-- hover -->
           <div class="absolute inset-0 border-2 border-cyan-400/0 group-hover:border-cyan-400/50 
                       rounded-xl transition-all duration-500 pointer-events-none"></div>
         </article>

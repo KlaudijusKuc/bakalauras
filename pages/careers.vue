@@ -8,7 +8,7 @@
       <div class="container mx-auto px-4 relative z-1">
         <div class="max-w-4xl mx-auto text-center">
           <h1 class="text-5xl md:text-6xl font-display font-bold mb-6 text-white">
-            Karjera su Mumis
+            Karjera su mumis
           </h1>
           <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Prisijunkite prie mūsų komandos ir kurkite ateities skaitmeninę realybę kartu
@@ -24,7 +24,7 @@
 
       <div class="container mx-auto px-4 relative z-1">
         <div class="text-center mb-16">
-          <h2 class="text-4xl font-display font-bold mb-4 text-white">Kodėl Verta Prisijungti</h2>
+          <h2 class="text-4xl font-display font-bold mb-4 text-white">Kodėl verta prisijungti</h2>
           <p class="text-xl text-gray-300 max-w-3xl mx-auto">
             Mes siūlome daugiau nei tik darbą – mūsų komandoje laukia galimybės augti ir tobulėti
           </p>
@@ -93,7 +93,7 @@
 
       <div class="container mx-auto px-4 relative z-1">
         <div class="text-center mb-16">
-          <h2 class="text-4xl font-display font-bold mb-4 text-white">Atviros Pozicijos</h2>
+          <h2 class="text-4xl font-display font-bold mb-4 text-white">Atviros pozicijos</h2>
           <p class="text-xl text-gray-300 max-w-3xl mx-auto">
             Šiuo metu ieškome talentingų specialistų šioms pozicijoms
           </p>
@@ -102,7 +102,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <!-- pozicija 1 -->
           <div class="glass-card rounded-xl p-8 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
-            <h3 class="text-2xl font-bold text-white mb-4">Full Stack Programuotojas</h3>
+            <h3 class="text-2xl font-bold text-white mb-4">Full stack programuotojas</h3>
             <div class="flex flex-wrap gap-2 mb-6">
               <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Pilnas etatas</span>
               <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Galimas nuotolinis</span>
@@ -134,7 +134,7 @@
 
           <!-- pozicija 3 -->
           <div class="glass-card rounded-xl p-8 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
-            <h3 class="text-2xl font-bold text-white mb-4">Mobiliųjų Programėlių Kūrėjas</h3>
+            <h3 class="text-2xl font-bold text-white mb-4">Mobiliųjų programėlių kūrėjas</h3>
             <div class="flex flex-wrap gap-2 mb-6">
               <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Pilnas etatas</span>
               <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Galimas nuotolinis</span>
@@ -150,14 +150,14 @@
 
           <!-- pozicija 4 -->
           <div class="glass-card rounded-xl p-8 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
-            <h3 class="text-2xl font-bold text-white mb-4">Skaitmeninio Marketingo Specialistas</h3>
+            <h3 class="text-2xl font-bold text-white mb-4">Skaitmeninio marketingo specialistas</h3>
             <div class="flex flex-wrap gap-2 mb-6">
               <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Pilnas etatas</span>
               <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm">Biuras</span>
               <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">Junior-Mid</span>
             </div>
             <p class="text-gray-300 mb-6">
-              Ieškome Digital Marketing specialisto, kuris padėtų mūsų klientams augti skaitmeninėje erdvėje. Reikalinga patirtis su SEO, SEM, socialinių tinklų marketingu ir analitikos įrankiais.
+              Ieškome digital marketing specialisto, kuris padėtų mūsų klientams augti skaitmeninėje erdvėje. Reikalinga patirtis su SEO, SEM, socialinių tinklų marketingu ir analitikos įrankiais.
             </p>
             <button @click="activeJob = 'Skaitmeninio Marketingo Specialistas'; scrollToForm()" class="px-5 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-400 hover:to-blue-500 transition-all duration-300 transform hover:scale-105">
               Pateikti paraišką

@@ -8,7 +8,7 @@
       <div class="container mx-auto px-4 relative z-1">
         <div class="max-w-4xl mx-auto text-center">
           <h1 class="text-5xl md:text-6xl font-display font-bold mb-6 text-white">
-            Apie Mus
+            Apie mus
           </h1>
           <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Sužinokite daugiau apie mūsų kompaniją, mūsų misiją ir technologijas, kurias mes naudojame
@@ -25,7 +25,7 @@
       <div class="container mx-auto px-4 relative z-1">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 class="text-4xl font-display font-bold mb-6 text-white">Mūsų Istorija</h2>
+            <h2 class="text-4xl font-display font-bold mb-6 text-white">Mūsų istorija</h2>
             <p class="text-xl text-gray-300 mb-6">
               e-shop99 buvo įkurta 2020 metais su tikslu padėti įmonėms sėkmingai plėtoti savo verslą skaitmeninėje erdvėje.
             </p>
@@ -199,7 +199,7 @@
 
       <div class="container mx-auto px-4 relative z-1">
         <div class="text-center mb-16">
-          <h2 class="text-4xl font-display font-bold mb-4 text-white">Mūsų Vertybės</h2>
+          <h2 class="text-4xl font-display font-bold mb-4 text-white">Mūsų vertybės</h2>
           <p class="text-xl text-gray-300 max-w-3xl mx-auto">
             Šios vertybės yra mūsų darbo pagrindas ir apibrėžia, kaip mes bendraujame su klientais, kolegomis ir visuomene
           </p>

@@ -71,6 +71,14 @@
             <EnvelopeIcon class="w-5 h-5 mr-3 text-purple-500" />
             Kontaktinės žinutės
           </NuxtLink>
+          <NuxtLink 
+            to="/admin/blog"
+            class="flex items-center px-4 py-3 mb-2 text-gray-300 hover:text-white rounded-lg hover:bg-white/5 transition-all duration-200"
+            :class="{ 'bg-white/5 text-white': $route.path.startsWith('/admin/blog') }"
+          >
+            <DocumentTextIcon class="w-5 h-5 mr-3 text-purple-500" />
+            Tinklaraštis
+          </NuxtLink>
           
           <button 
             @click="handleLogout" 
@@ -101,7 +109,8 @@ import {
   EnvelopeIcon,
   ArrowLeftOnRectangleIcon,
   Bars3Icon,
-  XMarkIcon
+  XMarkIcon,
+  DocumentTextIcon
 } from '@heroicons/vue/24/outline'
 
 const router = useRouter()

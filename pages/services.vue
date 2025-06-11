@@ -8,7 +8,7 @@
       <div class="container mx-auto px-4 relative z-1">
         <div class="max-w-4xl mx-auto text-center">
           <h1 class="text-5xl md:text-6xl font-display font-bold mb-6 text-white">
-            Mūsų Paslaugos
+            Mūsų paslaugos
           </h1>
           <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Profesionalūs skaitmeniniai sprendimai, pritaikyti jūsų verslo poreikiams
@@ -27,7 +27,7 @@
           <!-- web development -->
           <div id="web-development" class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div class="order-2 lg:order-1">
-              <h2 class="text-4xl font-display font-bold mb-6 text-white">Web Kūrimas</h2>
+              <h2 class="text-4xl font-display font-bold mb-6 text-white">Web kūrimas</h2>
               <p class="text-xl text-gray-300 mb-6">
                 Mūsų profesionalių programuotojų komanda sukurs modernias, greitai veikiančias ir patrauklias svetaines, kurios padės jūsų verslui išsiskirti internetinėje erdvėje.
               </p>
@@ -69,7 +69,7 @@
               </div>
             </div>
             <div>
-              <h2 class="text-4xl font-display font-bold mb-6 text-white">Mobilios Programėlės</h2>
+              <h2 class="text-4xl font-display font-bold mb-6 text-white">Mobilios programėlės</h2>
               <p class="text-xl text-gray-300 mb-6">
                 Kuriame natyvias ir kryžminės platformos mobilias programėles iOS ir Android sistemoms, kurios padeda pasiekti jūsų klientus bet kur ir bet kada.
               </p>
@@ -97,7 +97,7 @@
           <!-- skaitmeninis marketingas -->
           <div id="digital-marketing" class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div class="order-2 lg:order-1">
-              <h2 class="text-4xl font-display font-bold mb-6 text-white">Skaitmeninis Marketingas</h2>
+              <h2 class="text-4xl font-display font-bold mb-6 text-white">Skaitmeninis marketingas</h2>
               <p class="text-xl text-gray-300 mb-6">
                 Padedame jūsų verslui augti internetinėje erdvėje per strategiškai parengtus marketingo sprendimus, kurie pasiekia tikslinę auditoriją ir didina konversijas.
               </p>
@@ -139,7 +139,7 @@
 
       <div class="container mx-auto px-4 relative z-1">
         <div class="text-center mb-16">
-          <h2 class="text-4xl font-display font-bold mb-4 text-white">Papildomos Paslaugos</h2>
+          <h2 class="text-4xl font-display font-bold mb-4 text-white">Papildomos paslaugos</h2>
           <p class="text-xl text-gray-300 max-w-3xl mx-auto">
             Siūlome platų paslaugų spektrą, kad galėtume patenkinti visus jūsų skaitmeninio verslo poreikius
           </p>
@@ -152,7 +152,7 @@
               <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-6">
                 <ShieldCheckIcon class="w-6 h-6 text-purple-500" />
               </div>
-              <h3 class="text-xl font-bold text-white mb-4">Kibernetinis Saugumas</h3>
+              <h3 class="text-xl font-bold text-white mb-4">Kibernetinis saugumas</h3>
               <p class="text-gray-300 flex-grow">
                 Visapusiški saugumo sprendimai jūsų skaitmeniniam turtui apsaugoti, įskaitant saugumo auditus, apsaugą nuo įsilaužimų ir duomenų šifravimą.
               </p>
@@ -165,7 +165,7 @@
               <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-6">
                 <CloudIcon class="w-6 h-6 text-purple-500" />
               </div>
-              <h3 class="text-xl font-bold text-white mb-4">Debesies Sprendimai</h3>
+              <h3 class="text-xl font-bold text-white mb-4">Debesies sprendimai</h3>
               <p class="text-gray-300 flex-grow">
                 Masteliuojama debesies infrastruktūra ir debesijos paslaugos. Padedame migruoti į debesį ir optimizuoti jūsų infrastruktūros išlaidas.
               </p>
@@ -191,7 +191,7 @@
               <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-6">
                 <ShoppingCartIcon class="w-6 h-6 text-purple-500" />
               </div>
-              <h3 class="text-xl font-bold text-white mb-4">E-komercijos Sprendimai</h3>
+              <h3 class="text-xl font-bold text-white mb-4">E-komercijos sprendimai</h3>
               <p class="text-gray-300 flex-grow">
                 Elektroninių parduotuvių kūrimas ir integravimas su mokėjimo sistemomis, inventoriaus valdymu ir logistikos paslaugomis.
               </p>
@@ -217,7 +217,7 @@
               <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-6">
                 <WrenchScrewdriverIcon class="w-6 h-6 text-purple-500" />
               </div>
-              <h3 class="text-xl font-bold text-white mb-4">Priežiūra ir Palaikymas</h3>
+              <h3 class="text-xl font-bold text-white mb-4">Priežiūra ir palaikymas</h3>
               <p class="text-gray-300 flex-grow">
                 Nuolatinė svetainių ir programėlių priežiūra, atnaujinimai, saugumo patikros ir techninė pagalba 24/7.
               </p>
@@ -234,7 +234,7 @@
 
       <div class="container mx-auto px-4 relative z-1">
         <div class="text-center mb-16">
-          <h2 class="text-4xl font-display font-bold mb-4 text-white">Mūsų Darbo Procesas</h2>
+          <h2 class="text-4xl font-display font-bold mb-4 text-white">Mūsų darbo procesas</h2>
           <p class="text-xl text-gray-300 max-w-3xl mx-auto">
             Aiškus ir efektyvus darbo procesas užtikrina sklandų projektų vykdymą ir puikius rezultatus
           </p>

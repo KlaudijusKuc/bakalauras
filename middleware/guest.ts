@@ -3,17 +3,17 @@ import { defineNuxtRouteMiddleware, navigateTo } from '#app'
 export default defineNuxtRouteMiddleware((to) => {
   const path = to.path.toLowerCase()
   
-  // tik login page
+  // Only handle login page
   if (path !== '/admin/login') {
     return
   }
 
-  // serveryje leisti prieiga prie login page
+  // On server, allow access to login page
   if (process.server) {
     return
   }
 
-  // patikrinti, ar klientas jau autentifikuotas
+  // On client, check if already authenticated
   const token = localStorage.getItem('adminToken')
   if (token === 'admin-authenticated') {
     return navigateTo('/admin')

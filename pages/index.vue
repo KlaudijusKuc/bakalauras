@@ -70,8 +70,8 @@
       <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-4xl mx-auto text-center">
           <h1 class="text-5xl md:text-6xl font-display font-bold mb-6 text-white">
-            <span class="block">Paverčiame Jūsų Idėjas į</span>
-            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">Skaitmeninę Realybę</span>
+            <span class="block">Paverčiame jūsų idėjas </span>
+            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">į realybę</span>
           </h1>
           
           <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -89,7 +89,7 @@
               to="/services" 
               class="px-8 py-3 rounded-lg border border-purple-500/30 text-purple-300 hover:bg-purple-500/10 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:ring-offset-2 focus:ring-offset-[#1A1D2D] transition-all duration-300"
             >
-              Mūsų Paslaugos
+              Mūsų paslaugos
             </NuxtLink>
           </div>
         </div>
@@ -102,14 +102,14 @@
       </div>
     </section>
 
-    <!-- paslaugu sectionas -->
+    <!-- paslaugu section -->
     <section class="py-20 relative overflow-hidden" id="services">
       <div class="absolute inset-0 z-0 bg-gradient-to-b from-black via-purple-900/5 to-black"></div>
       <div class="absolute inset-0 z-0 bg-[url('/images/grid.svg')] opacity-5"></div>
 
       <div class="container mx-auto px-4 relative z-1">
         <div class="text-center mb-16">
-          <h2 class="text-4xl font-display font-bold mb-4 text-white">Mūsų Paslaugos</h2>
+          <h2 class="text-4xl font-display font-bold mb-4 text-white">Mūsų paslaugos</h2>
           <p class="text-xl text-gray-200">
             Visapusiški sprendimai, pritaikyti jūsų verslo poreikiams
           </p>
@@ -138,7 +138,7 @@
       <div class="container mx-auto px-4 relative z-1">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 class="text-4xl font-display font-bold mb-6 text-white">Kodėl Rinktis Mus</h2>
+            <h2 class="text-4xl font-display font-bold mb-6 text-white">Kodėl rinktis mus</h2>
             <p class="text-xl text-gray-200 mb-12">
               Mes apjungiame inovacijas su patirtimi, kad pateiktume išskirtinius rezultatus
             </p>
@@ -183,7 +183,7 @@
       <div class="container mx-auto px-4 relative z-1">
         <div class="max-w-4xl mx-auto text-center">
           <h2 class="text-4xl font-display font-bold mb-6 text-white">
-            Pradėkite Savo Skaitmeninę Kelionę Šiandien
+            Pradėkite savo skaitmeninę kelionę šiandien
           </h2>
           <p class="text-xl text-gray-300 mb-8">
             Susisiekite su mumis ir sužinokite, kaip galime padėti Jūsų verslui augti
@@ -219,27 +219,27 @@ definePageMeta({
 
 const services = [
   {
-    title: 'Tinklalapių Kūrimas',
+    title: 'Tinklalapių kūrimas',
     description: 'Individualūs web aplikacijų sprendimai, sukurti naudojant moderniausias technologijas ir geriausias praktikas.',
     icon: CodeBracketIcon
   },
   {
-    title: 'Mobilios Programėlės',
+    title: 'Mobilios programėlės',
     description: 'Natūralios ir kryžminės platformos mobilios programėlės iOS ir Android sistemoms.',
     icon: DevicePhoneMobileIcon
   },
   {
-    title: 'Kibernetinis Saugumas',
+    title: 'Kibernetinis saugumas',
     description: 'Visapusiški saugumo sprendimai jūsų skaitmeniniam turtui apsaugoti.',
     icon: ShieldCheckIcon
   },
   {
-    title: 'Debesies Sprendimai',
+    title: 'Debesies sprendimai',
     description: 'Masteliuojama debesies infrastruktūra ir debesijos paslaugos.',
     icon: CloudIcon
   },
   {
-    title: 'Skaitmeninis Marketingas',
+    title: 'Skaitmeninis marketingas',
     description: 'Strateginiai marketingo sprendimai jūsų internetinės svetainės verslo augimui.',
     icon: ChartBarIcon
   },
@@ -252,22 +252,22 @@ const services = [
 
 const features = [
   {
-    title: 'Ekspertų Komanda',
+    title: 'Ekspertų komanda',
     description: 'Mūsų komandą sudaro patyrę profesionalai su įvairiapatiršu.',
     icon: UserGroupIcon
   },
   {
-    title: 'Individualūs Sprendimai',
+    title: 'Individualūs sprendimai',
     description: 'Pritaikyti sprendimai, sukurti atitikti jūsų specifikus verslo poreikius.',
     icon: CodeBracketIcon
   },
   {
-    title: 'Kokybės Užtikrinimas',
+    title: 'Kokybės užtikrinimas',
     description: 'Stiprus testavimo ir kokybės kontrolės procesai patikimiems rezultatams.',
     icon: ShieldCheckIcon
   },
   {
-    title: '24/7 Palaikymas',
+    title: '24/7 palaikymas',
     description: 'Visą parą techninė pagalba ir priežiūros paslaugos.',
     icon: CloudIcon
   }

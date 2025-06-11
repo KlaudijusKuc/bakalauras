@@ -5,7 +5,7 @@ import { LockClosedIcon } from '@heroicons/vue/24/outline'
 
 definePageMeta({
   layout: 'login',
-  middleware: ['guest']
+  middleware: ['auth']
 })
 
 const router = useRouter()
@@ -13,21 +13,30 @@ const username = ref('')
 const password = ref('')
 const error = ref('')
 
-// patikrinti, ar jau prisijungta
+// patikrinti ar prisijungta
 onMounted(() => {
   const token = localStorage.getItem('adminToken')
   if (token === 'admin-authenticated') {
-    router.push('/admin')
+    navigateTo('/admin')
   }
 })
 
-async function handleLogin() {
-  // hardcoded loginai
-  if (username.value.toLowerCase() === 'admin' && password.value === 'admin123') {
-    localStorage.setItem('adminToken', 'admin-authenticated')
-    router.push('/admin')
-  } else {
-    error.value = 'Neteisingi prisijungimo duomenys'
+const handleLogin = async () => {
+  try {
+    const response = await $fetch('/api/auth/login', {
+      method: 'POST',
+      body: {
+        username: username.value,
+        password: password.value
+      }
+    })
+
+    if (response.success) {
+      localStorage.setItem('adminToken', 'admin-authenticated')
+      await navigateTo('/admin')
+    }
+  } catch (e: any) {
+    error.value = e.data?.message || 'Neteisingi prisijungimo duomenys'
   }
 }
 </script>
@@ -55,7 +64,7 @@ async function handleLogin() {
               required
               v-model="username"
               class="w-full px-3 md:px-4 py-2.5 md:py-3 rounded-lg bg-[#20243A] border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 text-sm md:text-base"
-              placeholder="admin"
+
             />
           </div>
 
@@ -67,7 +76,7 @@ async function handleLogin() {
               required
               v-model="password"
               class="w-full px-3 md:px-4 py-2.5 md:py-3 rounded-lg bg-[#20243A] border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 text-sm md:text-base"
-              placeholder="••••••••"
+
             />
           </div>
 

@@ -8,7 +8,7 @@
       <div class="container mx-auto px-4 relative z-1">
         <div class="max-w-4xl mx-auto text-center">
           <h1 class="text-5xl md:text-6xl font-display font-bold mb-6 text-white">
-            Susisiekite Su Mumis
+            Susisiekite su mumis
           </h1>
           <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Turite klausimų ar idėjų? Mūsų komanda pasiruošusi padėti Jums įgyvendinti Jūsų skaitmeninę viziją.
@@ -26,7 +26,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <!-- kontaktu informacija -->
           <div>
-            <h2 class="text-4xl font-display font-bold mb-6 text-white">Kaip Susisiekti</h2>
+            <h2 class="text-4xl font-display font-bold mb-6 text-white">Kaip susisiekti</h2>
             <p class="text-xl text-gray-200 mb-12">
               Esame čia, kad padėtume Jums bet kuriuo metu
             </p>
@@ -73,7 +73,7 @@
                   <ClockIcon class="w-6 h-6 text-purple-500" />
                 </div>
                 <div>
-                  <h3 class="text-xl font-bold text-white mb-2">Darbo Laikas</h3>
+                  <h3 class="text-xl font-bold text-white mb-2">Darbo laikas</h3>
                   <p class="text-gray-300">
                     Pirmadienis - Penktadienis: 9:00 - 18:00
                   </p>
@@ -84,7 +84,7 @@
 
           <!-- forma -->
           <div class="glass-card rounded-xl p-8">
-            <h3 class="text-2xl font-bold text-white mb-6">Parašykite Mums</h3>
+            <h3 class="text-2xl font-bold text-white mb-6">Parašykite mums</h3>
             
             <form @submit.prevent="submitForm" class="space-y-6">
               <div>
@@ -149,7 +149,7 @@
       
       <div class="container mx-auto px-4 relative z-1">
         <div class="text-center mb-16">
-          <h2 class="text-4xl font-display font-bold mb-4 text-white">Mūsų Vieta</h2>
+          <h2 class="text-4xl font-display font-bold mb-4 text-white">Mūsų vieta</h2>
           <p class="text-xl text-gray-200">
             Aplankykite mus šiuo adresu
           </p>

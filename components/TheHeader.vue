@@ -15,6 +15,7 @@
           <NuxtLink to="/about" class="text-white hover:text-purple-400 transition-colors">Apie Mus</NuxtLink>
           <NuxtLink to="/services" class="text-white hover:text-purple-400 transition-colors">Paslaugos</NuxtLink>
           <NuxtLink to="/careers" class="text-white hover:text-purple-400 transition-colors">Karjera</NuxtLink>
+          <NuxtLink to="/blog" class="text-white hover:text-purple-400 transition-colors">Blogas</NuxtLink>
           <NuxtLink to="/contacts" class="px-5 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-400 hover:to-blue-500 transition-all duration-300 transform hover:scale-105">Kontaktai</NuxtLink>
         </nav>
 
@@ -35,9 +36,10 @@
       >
         <div class="flex flex-col space-y-3 p-2">
           <NuxtLink @click="isMobileMenuOpen = false" to="/" class="text-white hover:text-purple-400 transition-colors py-2">Pagrindinis</NuxtLink>
-          <NuxtLink @click="isMobileMenuOpen = false" to="/about" class="text-white hover:text-purple-400 transition-colors py-2">Apie Mus</NuxtLink>
+          <NuxtLink @click="isMobileMenuOpen = false" to="/about" class="text-white hover:text-purple-400 transition-colors py-2">Apie mus</NuxtLink>
           <NuxtLink @click="isMobileMenuOpen = false" to="/services" class="text-white hover:text-purple-400 transition-colors py-2">Paslaugos</NuxtLink>
           <NuxtLink @click="isMobileMenuOpen = false" to="/careers" class="text-white hover:text-purple-400 transition-colors py-2">Karjera</NuxtLink>
+          <NuxtLink @click="isMobileMenuOpen = false" to="/blog" class="text-white hover:text-purple-400 transition-colors py-2">Blogas</NuxtLink>
           <NuxtLink @click="isMobileMenuOpen = false" to="/contacts" class="mt-2 px-5 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-400 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 inline-block">Kontaktai</NuxtLink>
         </div>
       </div>

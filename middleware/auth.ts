@@ -1,22 +1,23 @@
-import { defineNuxtRouteMiddleware, navigateTo, useNuxtApp } from '#app'
+import { defineNuxtRouteMiddleware, navigateTo } from '#app'
+import { useAuth } from '../composables/auth'
 
 export default defineNuxtRouteMiddleware((to) => {
+  const { isAuthenticated } = useAuth()
   const path = to.path.toLowerCase()
-  
-  // praleisti middleware login puslapiui
+
+  // Handle login page access
   if (path === '/admin/login') {
+    // If already authenticated, redirect to admin
+    if (isAuthenticated.value) {
+      return navigateTo('/admin')
+    }
     return
   }
 
-  // admin route'ams, patikrinti autentikacija
+  // Handle admin routes
   if (path.startsWith('/admin')) {
-    if (process.server) {
-      return navigateTo('/admin/login')
-    }
-
-    const token = localStorage.getItem('adminToken')
-    if (token !== 'admin-authenticated') {
+    if (!isAuthenticated.value) {
       return navigateTo('/admin/login')
     }
   }
-}) 
+})

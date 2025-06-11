@@ -28,7 +28,7 @@
 
         <!-- nuorodos -->
         <div>
-          <h3 class="text-white font-bold text-lg mb-6">Greitos Nuorodos</h3>
+          <h3 class="text-white font-bold text-lg mb-6">Greitos nuorodos</h3>
           <ul class="space-y-3">
             <li v-for="item in navigationItems" :key="item.path">
               <NuxtLink 
