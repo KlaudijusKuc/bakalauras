@@ -1,14 +1,20 @@
-import { writeFile, mkdir, readFile, unlink } from 'fs/promises'
-import { join, extname } from 'path'
+import { v2 as cloudinary } from 'cloudinary'
 import formidable from 'formidable'
-import type { Part } from 'formidable'
+import { readFile } from 'fs/promises'
+
+// Configure Cloudinary
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET
+})
 
 export default defineEventHandler(async (event) => {
   const form = formidable({
     maxFiles: 1,
     maxFileSize: 5 * 1024 * 1024, // 5MB
     allowEmptyFiles: false,
-    filter: (part: Part) => {
+    filter: (part) => {
       return part.mimetype?.startsWith('image/') || false
     }
   })
@@ -31,28 +37,25 @@ export default defineEventHandler(async (event) => {
       })
     }
 
-    // unique failo name
-    const ext = extname(file.originalFilename)
-    const filename = `${Date.now()}-${Math.random().toString(36).substring(2)}${ext}`
-    const relativePath = `/uploads/${filename}`
-    const uploadDir = join(process.cwd(), 'public/uploads')
+    // Read the file
+    const fileBuffer = await readFile(file.filepath)
 
-    // patikrinti upload direktorija
-    await mkdir(uploadDir, { recursive: true })
-
-    // perziureti faila ir rasyti i nauja lokacija
-    const content = await readFile(file.filepath)
-    await writeFile(join(uploadDir, filename), content)
-
-    // cleanup temporary file
-    try {
-      await unlink(file.filepath)
-    } catch (cleanupError) {
-      console.error('Failed to cleanup temporary file:', cleanupError)
-    }
+    // Upload to Cloudinary
+    const result = await new Promise((resolve, reject) => {
+      cloudinary.uploader.upload_stream(
+        {
+          folder: 'blog',
+          resource_type: 'auto'
+        },
+        (error, result) => {
+          if (error) reject(error)
+          else resolve(result)
+        }
+      ).end(fileBuffer)
+    })
 
     return {
-      url: relativePath
+      url: (result as any).secure_url
     }
   } catch (error: any) {
     console.error('Upload error:', error)
