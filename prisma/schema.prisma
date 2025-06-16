@@ -12,6 +12,7 @@ model Contact {
   name      String
   email     String
   message   String
+  reply     String?
   createdAt DateTime @default(now())
 }
 
@@ -24,6 +25,8 @@ model JobApplication {
   experience  String
   coverLetter String
   cvUrl       String?
+  status      String   @default("pending")
+  reply       String?
   createdAt   DateTime @default(now())
 }
 

@@ -4,8 +4,8 @@ export default defineEventHandler(async (event) => {
   try {
     const id = Number(event.context.params?.id)
     const body = await readBody(event)
-
-    // Validate required fields
+    
+    // validate required fields
     const requiredFields = ['title', 'slug', 'excerpt', 'content', 'category']
     for (const field of requiredFields) {
       if (!body[field]) {
@@ -16,7 +16,7 @@ export default defineEventHandler(async (event) => {
       }
     }
 
-    // Check if post exists
+    // check if post exists
     const existingPost = await prisma.blogPost.findUnique({
       where: { id }
     })
@@ -28,7 +28,7 @@ export default defineEventHandler(async (event) => {
       })
     }
 
-    // Check if slug is unique (excluding current post)
+    // check if slug is unique 
     if (body.slug !== existingPost.slug) {
       const slugExists = await prisma.blogPost.findFirst({
         where: {
