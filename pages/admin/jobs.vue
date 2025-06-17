@@ -285,6 +285,10 @@ const replyText = ref('');
 const acceptMessage = ref('');
 const rejectMessage = ref('');
 
+useSeoMeta({
+  title: 'Darbo skelbimai - E-Shop99'
+})
+
 onMounted(async () => {
   await loadApplications();
 });

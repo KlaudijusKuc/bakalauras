@@ -53,6 +53,10 @@ useHead({
     { name: 'description', content: 'Mūsų svetainės sąlygos ir taisyklės, reguliuojančios naudojimąsi mūsų paslaugomis.' }
   ]
 })
+
+useSeoMeta({
+  title: 'Taisyklės ir sąlygos - E-Shop99'
+})
 </script>
 
 <style scoped>

@@ -335,8 +335,8 @@ import {
   ChartBarIcon
 } from '@heroicons/vue/24/outline'
 
-definePageMeta({
-  layout: 'default'
+useSeoMeta({
+  title: 'Paslaugos - E-Shop99'
 })
 </script>
 

@@ -129,6 +129,10 @@ definePageMeta({
   middleware: ['auth']
 });
 
+useSeoMeta({
+  title: 'Žinutės - E-Shop99'
+})
+
 const messages = ref([]);
 const loading = ref(true);
 const error = ref(null);

@@ -39,6 +39,10 @@ const handleLogin = async () => {
     error.value = e.data?.message || 'Neteisingi prisijungimo duomenys'
   }
 }
+
+useSeoMeta({
+  title: 'Prisijungimas - E-Shop99'
+})
 </script>
 
 <template>

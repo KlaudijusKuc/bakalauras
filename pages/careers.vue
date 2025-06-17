@@ -479,6 +479,10 @@ async function submitApplication() {
     isSubmitting.value = false;
   }
 }
+
+useSeoMeta({
+  title: 'Karjera - E-Shop99'
+})
 </script>
 
 <style scoped>

@@ -180,9 +180,9 @@ import {
   ClockIcon 
 } from '@heroicons/vue/24/outline'
 
-definePageMeta({
-  layout: 'default'
-});
+useSeoMeta({
+  title: 'Kontaktai - E-Shop99'
+})
 
 const form = ref({
   name: '',

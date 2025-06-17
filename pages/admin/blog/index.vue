@@ -73,12 +73,18 @@ interface BlogPost {
   updatedAt: string
 }
 
+interface BlogPostsResponse {
+  data: BlogPost[]
+  success: boolean
+  message: string
+}
+
 const posts = ref<BlogPost[]>([])
 
 // fetch posts
 const fetchPosts = async () => {
   try {
-    posts.value = await $fetch('/api/blog')
+    posts.value = await $fetch<BlogPost[]>('/api/blog')
   } catch (error) {
     console.error('Failed to fetch posts:', error)
   }

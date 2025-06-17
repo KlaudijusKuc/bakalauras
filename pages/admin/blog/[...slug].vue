@@ -123,6 +123,17 @@ interface BlogPost {
   published: boolean
 }
 
+interface UploadResponse {
+  url: string
+}
+
+interface BlogPostResponse {
+  id: number
+  data: BlogPost
+  success: boolean
+  message: string
+}
+
 const post = ref<BlogPost>({
   title: '',
   slug: '',
@@ -163,7 +174,7 @@ const handleImageUpload = async (event: Event) => {
   formData.append('image', file)
 
   try {
-    const response = await $fetch('/api/upload', {
+    const response = await $fetch<UploadResponse>('/api/upload', {
       method: 'POST',
       body: formData
     })
@@ -201,7 +212,7 @@ const savePost = async (published: boolean) => {
         body: post.value
       })
     } else {
-      const response = await $fetch('/api/blog', {
+      const response = await $fetch<BlogPostResponse>('/api/blog', {
         method: 'POST',
         body: post.value
       })

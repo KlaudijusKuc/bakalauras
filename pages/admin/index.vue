@@ -195,6 +195,10 @@ definePageMeta({
   middleware: ['auth']
 });
 
+useSeoMeta({
+  title: 'Administravimas - E-Shop99'
+})
+
 const loading = ref(true);
 const stats = ref({
   messages: 0,

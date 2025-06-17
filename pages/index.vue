@@ -217,6 +217,10 @@ definePageMeta({
   layout: 'default'
 })
 
+useSeoMeta({
+  title: 'E-Shop99 - Skaitmeniniai sprendimai jūsų verslui'
+})
+
 const services = [
   {
     title: 'Tinklalapių kūrimas',

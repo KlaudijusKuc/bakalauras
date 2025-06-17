@@ -92,6 +92,10 @@ definePageMeta({
   layout: 'default'
 })
 
+useSeoMeta({
+  title: 'Blogas - E-Shop99'
+})
+
 const route = useRoute()
 const post = ref<BlogPost | null>(null)
 const loading = ref(true)

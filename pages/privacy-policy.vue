@@ -49,11 +49,8 @@
 </template>
 
 <script setup lang="ts">
-useHead({
-  title: 'Privatumo politika - E-Shop99',
-  meta: [
-    { name: 'description', content: 'Mūsų privatumo politika, aprašanti duomenų rinkimą ir naudojimą.' }
-  ]
+useSeoMeta({
+  title: 'Privatumo politika - E-Shop99'
 })
 </script>
 

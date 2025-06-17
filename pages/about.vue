@@ -280,8 +280,8 @@ import {
   ShieldCheckIcon
 } from '@heroicons/vue/24/outline'
 
-definePageMeta({
-  layout: 'default'
+useSeoMeta({
+  title: 'Apie mus - E-Shop99'
 })
 </script>
 

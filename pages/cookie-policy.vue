@@ -46,6 +46,10 @@ useHead({
     { name: 'description', content: 'Mūsų slapukų politika, aprašanti slapukų naudojimą ir valdymą.' }
   ]
 })
+
+useSeoMeta({
+  title: 'Slapukų politika - E-Shop99'
+})
 </script>
 
 <style scoped>
