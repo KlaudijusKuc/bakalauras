@@ -43,7 +43,9 @@
 
         <!-- paslaugos -->
         <div>
-          <h3 class="text-white font-bold text-lg mb-6">Paslaugos</h3>
+          <NuxtLink to="/services" class="text-white font-bold text-lg mb-6 block hover:text-purple-400 transition-colors duration-300">
+            <h3>Paslaugos</h3>
+          </NuxtLink>
           <ul class="space-y-3">
             <li v-for="service in services" :key="service.name">
               <NuxtLink 
@@ -58,11 +60,15 @@
 
         <!-- kontaktai -->
         <div>
-          <h3 class="text-white font-bold text-lg mb-6">Kontaktai</h3>
+          <NuxtLink to="/contacts" class="text-white font-bold text-lg mb-6 block hover:text-purple-400 transition-colors duration-300">
+            <h3>Kontaktai</h3>
+          </NuxtLink>
           <ul class="space-y-3">
             <li class="flex items-center text-gray-300 group">
               <MapPinIcon class="w-5 h-5 mr-3 text-purple-500 group-hover:text-purple-400 transition-colors duration-300" />
-              <span class="group-hover:text-white transition-colors duration-300">Vilnius, Lietuva</span>
+              <NuxtLink to="/contacts" class="group-hover:text-white transition-colors duration-300">
+                <span>Kaunas, Lietuva</span>
+              </NuxtLink>
             </li>
             <li class="flex items-center text-gray-300 group">
               <EnvelopeIcon class="w-5 h-5 mr-3 text-purple-500 group-hover:text-purple-400 transition-colors duration-300" />
@@ -72,8 +78,8 @@
             </li>
             <li class="flex items-center text-gray-300 group">
               <PhoneIcon class="w-5 h-5 mr-3 text-purple-500 group-hover:text-purple-400 transition-colors duration-300" />
-              <a href="tel:+37061234567" class="group-hover:text-white transition-colors duration-300">
-                +370 612 34 567
+              <a href="tel:+37068111194" class="group-hover:text-white transition-colors duration-300">
+                +370 681 11194
               </a>
             </li>
           </ul>
@@ -91,7 +97,7 @@
               v-for="link in legalLinks" 
               :key="link.path"
               :to="link.path"
-              class="text-gray-400 hover:text-white text-sm transition-colors duration-300"
+              class="text-gray-400 text-sm hover:text-white transition-colors duration-300"
             >
               {{ link.name }}
             </NuxtLink>
@@ -117,11 +123,11 @@ const navigationItems = [
 ]
 
 const services = [
-  { name: 'Web Development', path: '/services#web-development' },
-  { name: 'Mobilios Programėlės', path: '/services#mobile-apps' },
-  { name: 'Skaitmeninis Marketingas', path: '/services#digital-marketing' },
-  { name: 'Kibernetinis Saugumas', path: '/services#cybersecurity' },
-  { name: 'Debesies Sprendimai', path: '/services#cloud-solutions' },
+  { name: 'Web development', path: '/services#web-development' },
+  { name: 'Mobilios programėlės', path: '/services#mobile-apps' },
+  { name: 'Skaitmeninis marketingas', path: '/services#digital-marketing' },
+  { name: 'Kibernetinis saugumas', path: '/services#cybersecurity' },
+  { name: 'Debesies sprendimai', path: '/services#cloud-solutions' },
   { name: 'Konsultacijos', path: '/services#consulting' }
 ]
 
@@ -149,8 +155,8 @@ const socialLinks = [
 ]
 
 const legalLinks = [
-  { name: 'Privatumo politika', path: '#' },
-  { name: 'Sąlygos ir taisyklės', path: '#' },
-  { name: 'Slapukų politika', path: '#' }
+  { name: 'Privatumo politika', path: '/privacy-policy' },
+  { name: 'Sąlygos ir taisyklės', path: '/terms-and-conditions' },
+  { name: 'Slapukų politika', path: '/cookie-policy' }
 ]
 </script> 

@@ -39,7 +39,7 @@
                 <div>
                   <h3 class="text-xl font-bold text-white mb-2">El. Paštas</h3>
                   <p class="text-gray-300">
-                    info@eshop99.com
+                    <a href="mailto:info@e-shop99.com" class="hover:text-white transition-colors">info@e-shop99.com</a>
                   </p>
                 </div>
               </div>
@@ -51,7 +51,7 @@
                 <div>
                   <h3 class="text-xl font-bold text-white mb-2">Telefonas</h3>
                   <p class="text-gray-300">
-                    +370 600 00000
+                    <a href="tel:+37068111194" class="hover:text-white transition-colors">+370 681 11194</a>
                   </p>
                 </div>
               </div>
@@ -63,7 +63,7 @@
                 <div>
                   <h3 class="text-xl font-bold text-white mb-2">Adresas</h3>
                   <p class="text-gray-300">
-                    Vilniaus g. 99, Vilnius, Lietuva
+                    Kaunas, Jonavos g. 254a
                   </p>
                 </div>
               </div>
@@ -155,11 +155,17 @@
           </p>
         </div>
         
-        <div class="glass-card rounded-xl p-4 aspect-video overflow-hidden">
+        <div class="glass-card rounded-xl p-4 overflow-hidden h-[750px]">
           <!-- map placeholderis -->
-          <div class="h-full w-full bg-purple-800/20 flex items-center justify-center">
-            <MapPinIcon class="w-16 h-16 text-purple-500 animate-bounce" />
-          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2305.862446738914!2d23.90562917711466!3d54.91263025807963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e72251a3a31c5b%3A0x1d54f5b3a3c200e!2sJonavos%20g.%20254a%2C%20Kaunas%2044132!5e0!3m2!1slt!2slt!4v1700000000000!5m2!1slt!2slt"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     </section>

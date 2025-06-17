@@ -12,7 +12,7 @@
         <!-- desktop navigacija -->
         <nav class="hidden md:flex space-x-6 items-center">
           <NuxtLink to="/" class="text-white hover:text-purple-400 transition-colors">Pagrindinis</NuxtLink>
-          <NuxtLink to="/about" class="text-white hover:text-purple-400 transition-colors">Apie Mus</NuxtLink>
+          <NuxtLink to="/about" class="text-white hover:text-purple-400 transition-colors">Apie mus</NuxtLink>
           <NuxtLink to="/services" class="text-white hover:text-purple-400 transition-colors">Paslaugos</NuxtLink>
           <NuxtLink to="/careers" class="text-white hover:text-purple-400 transition-colors">Karjera</NuxtLink>
           <NuxtLink to="/blog" class="text-white hover:text-purple-400 transition-colors">Blogas</NuxtLink>
