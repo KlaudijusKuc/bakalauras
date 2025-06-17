@@ -41,7 +41,7 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'Slapukų politika - Jūsų įmonės pavadinimas',
+  title: 'Slapukų politika - E-Shop99',
   meta: [
     { name: 'description', content: 'Mūsų slapukų politika, aprašanti slapukų naudojimą ir valdymą.' }
   ]
@@ -49,5 +49,5 @@ useHead({
 </script>
 
 <style scoped>
-/* Add any specific styles for the cookie policy page here */
+
 </style> 

@@ -37,7 +37,7 @@
           <h2 class="text-2xl font-semibold text-white mb-4">6. Susisiekite su mumis</h2>
           <p class="text-gray-300 mb-4">Jei turite klausimų apie šias sąlygas, susisiekite su mumis:</p>
           <ul class="list-disc list-inside mb-4 text-gray-300">
-            <li>El. paštu: info@jusuimone.lt</li>
+            <li>El. paštu: info@e-shop99.lt</li>
             <li>Per mūsų svetainės kontaktų formą</li>
           </ul>
         </div>
@@ -48,7 +48,7 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'Sąlygos ir taisyklės - Jūsų įmonės pavadinimas',
+  title: 'Sąlygos ir taisyklės - E-Shop99',
   meta: [
     { name: 'description', content: 'Mūsų svetainės sąlygos ir taisyklės, reguliuojančios naudojimąsi mūsų paslaugomis.' }
   ]
@@ -56,5 +56,5 @@ useHead({
 </script>
 
 <style scoped>
-/* Add any specific styles for the terms and conditions page here */
+
 </style> 
