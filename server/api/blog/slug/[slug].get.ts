@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
     if (!slug) {
       throw createError({
         statusCode: 400,
-        message: 'Slug is required'
+        message: 'URL yra privalomas'
       })
     }
 
@@ -18,15 +18,16 @@ export default defineEventHandler(async (event) => {
     if (!post) {
       throw createError({
         statusCode: 404,
-        message: 'Blog post not found'
+        message: 'Įrašas nerastas'
       })
     }
 
     return post
   } catch (error: any) {
+    console.error('Error fetching blog post:', error)
     throw createError({
       statusCode: error.statusCode || 500,
-      message: error.message || 'Failed to fetch blog post'
+      message: error.message || 'Nepavyko gauti tinklaraščio įrašo'
     })
   }
 }) 

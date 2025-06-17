@@ -10,14 +10,14 @@ export default defineEventHandler(async (event) => {
     if (!idParam || !/^\d+$/.test(idParam)) {
       throw createError({
         statusCode: 400,
-        message: 'Valid numeric ID is required'
+        message: 'Privalomas skaitinis ID'
       })
     }
 
     const id = parseInt(idParam)
     console.log('Attempting to find post with ID:', id)
 
-    const post = await prisma.blog.findUnique({
+    const post = await prisma.blogPost.findUnique({
       where: { id }
     })
     
@@ -51,10 +51,10 @@ export default defineEventHandler(async (event) => {
     }
     
     // unexpected errors
-    console.error('Failed to fetch blog post:', error)
+    console.error('Error fetching blog post:', error)
     throw createError({
-      statusCode: 500,
-      message: 'Nepavyko gauti tinklaraščio įrašo'
+      statusCode: error.statusCode || 500,
+      message: error.message || 'Nepavyko gauti tinklaraščio įrašo'
     })
   }
 }) 

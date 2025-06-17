@@ -26,14 +26,14 @@ export default defineEventHandler(async (event) => {
     if (!file) {
       throw createError({
         statusCode: 400,
-        message: 'No image file provided'
+        message: 'Nepateiktas paveikslėlio failas'
       })
     }
 
     if (!file.originalFilename) {
       throw createError({
         statusCode: 400,
-        message: 'Invalid file name'
+        message: 'Neteisingas failo pavadinimas'
       })
     }
 
@@ -64,27 +64,27 @@ export default defineEventHandler(async (event) => {
     if (error.code === 'LIMIT_FILE_SIZE') {
       throw createError({
         statusCode: 400,
-        message: 'File size exceeds 5MB limit'
+        message: 'Failo dydis viršija 5MB limitą'
       })
     }
 
     if (error.code === 'LIMIT_FILE_COUNT') {
       throw createError({
         statusCode: 400,
-        message: 'Only one file can be uploaded at a time'
+        message: 'Vienu metu galima įkelti tik vieną failą'
       })
     }
 
     if (error.message?.includes('mimetype')) {
       throw createError({
         statusCode: 400,
-        message: 'Only image files are allowed'
+        message: 'Leidžiami tik paveikslėlių failai'
       })
     }
 
     throw createError({
       statusCode: error.statusCode || 500,
-      message: error.message || 'Failed to upload file'
+      message: error.message || 'Nepavyko įkelti failo'
     })
   }
 }) 

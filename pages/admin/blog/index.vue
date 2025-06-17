@@ -1,44 +1,50 @@
 <template>
-  <div class="p-6">
-    <div class="flex justify-between items-center mb-6">
-      <h1 class="text-2xl font-bold text-white">Tinklaraščio įrašai</h1>
+  <div class="px-4 md:px-0">
+    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6 md:mb-8">
+      <h1 class="ml-12 lg:ml-0 text-2xl md:text-3xl font-bold text-white text-center sm:text-left">Tinklaraščio įrašai</h1>
       <NuxtLink
         to="/admin/blog/new"
-        class="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium hover:from-purple-500 hover:to-blue-500 transition-all duration-200"
+        class="px-3 md:px-4 py-2 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium hover:from-purple-500 hover:to-blue-500 transition-all duration-200 w-full sm:w-auto flex items-center justify-center"
       >
         Naujas įrašas
       </NuxtLink>
     </div>
 
     <!-- blog posts list -->
-    <div class="grid gap-4">
-      <div v-for="post in posts" :key="post.id" class="glass-card rounded-lg p-4">
-        <div class="flex items-center gap-4">
-          <img :src="post.image" :alt="post.title" class="w-16 h-16 object-cover rounded-lg" />
-          <div class="flex-grow">
-            <h3 class="text-lg font-semibold text-white">{{ post.title }}</h3>
-            <p class="text-sm text-gray-400">{{ post.category }}</p>
+    <div class="grid gap-4 md:gap-6">
+      <div v-for="post in posts" :key="post.id" class="glass-card rounded-xl p-4 md:p-6 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 md:gap-4 mb-4">
+          <div class="flex items-center w-full sm:w-auto">
+            <img :src="post.image" :alt="post.title" class="w-16 h-16 object-cover rounded-lg mr-3 md:mr-4 flex-shrink-0" />
+            <div class="flex-grow">
+              <h3 class="text-lg md:text-xl font-semibold text-white break-words flex-grow">{{ post.title }}</h3>
+              <p class="text-sm md:text-base text-gray-400 break-words">{{ post.category }}</p>
+            </div>
           </div>
-          <div class="flex items-center gap-2">
+          <div class="flex flex-col items-end gap-2 text-nowrap mt-2 sm:mt-0">
             <span :class="[
-              'px-2 py-1 rounded-full text-xs',
+              'px-2 py-1 rounded-full text-xs font-medium',
               post.published ? 'bg-green-500/20 text-green-400' : 'bg-yellow-500/20 text-yellow-400'
             ]">
               {{ post.published ? 'Paskelbta' : 'Juodraštis' }}
             </span>
-            <NuxtLink
-              :to="'/admin/blog/' + post.slug"
-              class="p-2 rounded-lg bg-purple-500/10 hover:bg-purple-500/20 text-purple-400 transition-all duration-200"
-            >
-              <PencilIcon class="w-5 h-5" />
-            </NuxtLink>
-            <button
-              @click="deletePost(post.id)"
-              class="p-2 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-400 transition-all duration-200"
-            >
-              <TrashIcon class="w-5 h-5" />
-            </button>
           </div>
+        </div>
+        <div class="ml-0 sm:ml-[calc(theme('spacing.16') + theme('spacing.4'))] mt-4 flex flex-col sm:flex-row flex-wrap gap-2 md:gap-3">
+          <NuxtLink
+            :to="'/admin/blog/' + post.slug"
+            class="px-2.5 md:px-3 py-1 md:py-1.5 rounded-lg bg-purple-500/10 text-purple-300 hover:bg-purple-500/20 transition-colors duration-200 flex items-center justify-center text-sm md:text-base w-full sm:w-auto"
+          >
+            <PencilIcon class="w-3.5 h-3.5 md:w-4 md:h-4 mr-1" />
+            Redaguoti
+          </NuxtLink>
+          <button
+            @click="deletePost(post.id)"
+            class="px-2.5 md:px-3 py-1 md:py-1.5 rounded-lg bg-red-500/10 text-red-300 hover:bg-red-500/20 transition-colors duration-200 flex items-center justify-center text-sm md:text-base w-full sm:w-auto"
+          >
+            <TrashIcon class="w-3.5 h-3.5 md:w-4 md:h-4 mr-1" />
+            Ištrinti
+          </button>
         </div>
       </div>
     </div>

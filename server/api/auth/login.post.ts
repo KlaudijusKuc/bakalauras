@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
   if (!username || !password) {
     throw createError({
       statusCode: 400,
-      message: 'Username and password are required'
+      message: 'Vartotojo vardas ir slaptažodis yra privalomi'
     })
   }
 
@@ -15,7 +15,7 @@ export default defineEventHandler(async (event) => {
   if (!adminPassword) {
     throw createError({
       statusCode: 500,
-      message: 'Admin password not configured'
+      message: 'Administratoriaus slaptažodis nesukonfigūruotas'
     })
   }
 
@@ -25,6 +25,6 @@ export default defineEventHandler(async (event) => {
 
   throw createError({
     statusCode: 401,
-    message: 'Invalid credentials'
+    message: 'Neteisingi prisijungimo duomenys'
   })
 }) 
